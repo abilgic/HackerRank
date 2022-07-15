@@ -59,7 +59,6 @@ namespace Flippingbits
             predigits.ForEach(i =>
             {
                 Console.Write($"{i}");
-
             }
             );
             Console.WriteLine("");
@@ -68,14 +67,11 @@ namespace Flippingbits
             predigits.Reverse();
             for (int i = 0; i < predigits.Count; i++)
             {
-
-
                 if (predigits[i] == 1)
                 {
                     //Console.Write($"{(long)(Math.Pow(2, i))}*");
                     deci = deci + (long)(Math.Pow(2, i));
                 }
-
             }
             Console.WriteLine("");
             Console.WriteLine($"**deci:{deci}*********************************");
