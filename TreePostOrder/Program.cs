@@ -1,5 +1,4 @@
-﻿using TreePostOrder;
-
+﻿using TreePostPreInOrder;
 
 var tree = new BinarySearchTree();
 /*
