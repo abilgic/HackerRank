@@ -1,33 +1,58 @@
 ﻿
 //string s = "7";
-//string s ="1234";
-//string s = "91011";
-string s = "99100";
-//string s = "101103";
+//string str ="1234";
+string str = "91011";
+//string str = "99100";
+//string str = "101103";
 //string s ="010203";
 //string s = "13";
 //string s ="1";
+var beautiful = false;
+var length = str.Length;
+var firstsmall = 0;
+//Substring(0, 1)
+//Substring(1, 2)
+//Substring(3, 2)
 
-
-for (int i = 1; i< s.Length; i++)
+for (var i = 1; i + 1 < length; i++)
 {
-    for (int j = 1; j < s.Length; j++)
-    {
-        if (i + j < s.Length)
+    var num = Convert.ToInt64(str.Substring(0, 1));
+
+    if (num == 9)
+    {if ((2 * i - 1) < length)
         {
-           // var firstnumber = Convert.ToInt64(s.Substring(0, i));
-
-            var secondnumber = Convert.ToInt64(s.Substring(i, j));
-
-            Console.WriteLine($" {i} {i+j}");
-            
-            //Console.WriteLine($"{secondnumber}-{firstnumber}  => {secondnumber - firstnumber} ");
+            var num2 = Convert.ToInt64(str.Substring(2 * i - 1, 2));
+            Console.Write(num2 + ",");
         }
-
-
-
     }
-    
+    else
+    {
+        var num1 = Convert.ToInt64(str.Substring(i, 1));
+        var num2 = Convert.ToInt64(str.Substring(i + 1, 1));
+        if (num2 - num1 == 1)
+        {
+            beautiful = true;
+        }
+        else
+        {
+            beautiful = false;
+            break;
+        }
+    }
+}
+
+//if (num1 == 9)
+//{       
+
+//}
+Console.WriteLine();
+if (beautiful)
+{
+    Console.WriteLine($"YES {firstsmall}");
+}
+else
+{
+    Console.WriteLine($"NO");
 }
 
 
